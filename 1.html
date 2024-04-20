@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Navigation Menu</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url(train.png); 
+      background-size: cover;
+      background-attachment: fixed;
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      position: fixed;
+      top: 0%;
+      width: 100%;
+      background-color: #e9a1a107;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .nav-item {
+      padding: 15px 20px;
+      color: #dba9a9;
+      top: 35%;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .nav-item:hover {
+      background-color: #e0d2d2;
+    }
+    h2{
+      color: aliceblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar" id="navbar">
+      <h2>PAKISTAN RAILWAYS</h2>
+    <a href="#" class="nav-item">Home</a>
+    <a href="#" class="nav-item">About</a>
+    <a href="#" class="nav-item">Services</a>
+    <a href="#" class="nav-item">Contact</a>
+    <a href="#" class="nav-item">Tickets</a>
+  </div>
+  <script>
+    window.addEventListener('scroll', function() {
+      var navbar = document.getElementById('navbar');
+      if (window.scrollY > 0) {
+        navbar.style.backgroundColor = '#222';
+      } else {
+        navbar.style.backgroundColor = '#333';
+      }
+    });
+  </script>
+</body>
+</html>
